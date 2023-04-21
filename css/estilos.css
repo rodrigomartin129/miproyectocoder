@@ -1,0 +1,625 @@
+@font-face {
+  font-family: oddly;
+  src: url(../fonts/Oddly\ Calming\ DEMO.ttf);
+}
+
+@font-face {
+  font-family: lg;
+  src: url(../fonts/LuckiestGuy-Regular.ttf);
+}
+
+@font-face {
+  font-family: led;
+  src: url(../fonts/LEDBDREV.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  width: 100%;
+}
+
+header{
+  height: 220px;
+  width: 100%;
+  background-color: #398ab9;
+  font-family: oddly, cursive;
+  padding: 10px 20px;
+  color: #1c658c;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "img1 img2"
+                       "img1 img3" ;
+  align-items: flex-end;  
+}
+
+.logo{
+
+  font-family: lg;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgb(6, 40, 61);
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+  text-align: center;
+  grid-area: img1;
+}
+
+.logo span{
+  color: hsla(0, 0%, 97%, 0.933);
+  text-shadow: 0 0 10px rgb(6, 40, 61);
+}
+
+.logo img{
+  height: 120px;
+  width: auto;
+}
+
+.info_header{
+  font-size: 8px;
+  color: #06283d;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: #06283d 1px solid;
+  height: 20px;
+  width: fit-content;
+  grid-area: img2;
+  justify-self: center;
+}
+
+.info_header h2{
+  display: inline;
+  padding: 0 10px;
+  
+}
+
+.menu{
+  font-size: 22px;
+  grid-area: img3;
+  width: fit-content;
+  justify-self: center;
+  padding-bottom: 30px;
+  
+}
+
+.menu i{
+  display: none;
+}
+
+ul{
+  list-style: none;
+}
+
+.menu ul li{
+  display: inline-block;
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+.menu ul a{
+  color: hsla(0, 0%, 97%, 0.933);
+  text-decoration: none;
+}
+
+.menu ul a:hover{
+  color: rgb(6, 40, 61);
+}
+
+main{
+  background-color: hsla(0, 0%, 97%, 0.933);
+  background-image: linear-gradient(to bottom,hsla(0, 0%, 97%, 0.419),hsla(0, 0%, 97%, 0.347)), url(../multimedia/fondo.jpg);
+  background-size: cover;
+  background-position: left;
+}
+
+.rubros_home{ 
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rubros_home h2{
+  font-size: 50px;
+  height: auto;
+  width: 100vmax;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: oddly, cursive;
+  letter-spacing: 2px;
+  color: hsla(0, 0%, 97%, 0.933);
+  text-shadow: 3px 3px rgb(6, 40, 61);
+}
+
+
+
+.contenedor{ 
+  width: 1009px;
+  height: 380px;
+  display: grid;
+  padding: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "item1 item2 item3 item4"
+                       "item5 item6 item7 item8";
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.rubro1{
+  grid-area: item1;
+}
+.rubro2{
+  grid-area: item2;
+}
+.rubro3{
+  grid-area: item3;
+}
+.rubro4{
+  grid-area: item4;
+}
+.rubro5{
+  grid-area: item5;
+}
+.rubro6{
+  grid-area: item6;
+}
+.rubro7{
+  grid-area: item7;
+}
+.rubro8{
+  grid-area: item8;
+}
+
+
+.rubro{
+  height: 160px;
+  width: 270px;
+  background-color: white;
+  border: 4px inset rgba(255, 255, 255, 0.457);
+  text-align: center;
+  line-height: 270px;
+  color: rgb(61, 6, 6);
+  font-family: lg;
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: capitalize;
+  opacity: 0.6;
+}
+
+.rubro img{
+  height: auto;
+  width: 110px;
+  position: absolute;
+  
+}
+
+.rubro a{
+  text-decoration: none;  
+}
+
+.rubro:hover{
+  opacity: 1;
+  border: 3px outset rgb(255, 255, 255);
+}
+
+.marquee_home img{
+  height: 80px;
+  width: auto;
+  padding: 5px 0px;
+  
+}
+
+.quienes_somos{
+  height: 1350px ;
+  width: 100%;
+  font-size: 20px;
+  color: rgb(6, 40, 61);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: hsl(0, 0%, 97%);
+  background-size: contain;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+}
+
+
+.contenedor_qs{  
+  display: grid;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.contenedor_qs img{
+  width: auto;
+  height: 300px;
+  padding: 10px;
+}
+
+.contenedor_qs p{
+  width: 500px;
+  height: 400px;
+  padding: 50px;
+  text-align: justify;
+}
+
+.quienes_somos h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+  width: 30%;
+  text-align: center;
+  display: inline-table;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.productos{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.productos h1{
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Bangers', cursive;
+  font-size: 46px;
+  padding: 5px;
+  color: rgb(6, 40, 61);
+  text-shadow: 0 0 5px rgb(57, 138, 185);
+  letter-spacing: 2px;
+}
+
+.productos table{
+  margin: 40px 65px;
+  background-color: white;
+  padding: 10px;
+}
+
+
+.productos img{
+  width: 220px;
+  height: auto;   
+}
+
+.productos li{
+  font-size: 18px;
+}
+
+.precio{
+  font-size: 18px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.productos th{
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgb(6, 40, 61);
+}
+
+.productos td{
+  padding: 0px 20px;
+  border-bottom: 1px solid rgb(6, 40, 61);
+}
+
+.novedades{
+  background-image: url(../multimedia/fondo_novedades.jpg);
+  height: 1250px;
+  background-size: cover;
+  background-position: center;
+}
+
+#novedades{
+  height: 50px;
+  background-color: #06283d;
+  margin-bottom: -5px;
+  font-family: led ,'Wendy One', sans-serif;
+  color: #ec0404;
+  font-size: 40px;
+  text-transform: uppercase;
+  padding: 4px;
+}
+
+article{
+  padding: 20px;
+}
+
+.novedades h2{ 
+  text-align: center;
+  background-color: rgb(57, 138, 185);
+  font-family: 'Bangers', cursive;
+  font-size: 32px;
+  padding: 5px;
+  color: rgb(6, 40, 61);
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.cont{
+  text-align: center;
+}
+
+
+.formulario_contacto{
+  width: 65%;
+  color: rgb(6, 40, 61);
+  background-color: rgb(216, 210, 203);
+  float:left;
+  border: 3px solid hsla(0, 0%, 97%, 0.933) ;
+  margin-left: 100px;
+  margin-top: 80px;
+  padding: 15px;
+  font-size: 24px;
+  font-family: 'Bangers', cursive;
+}
+
+.formulario_contacto h1{
+  font-size: 40px;
+  font-family: 'Bangers', cursive;
+}
+
+.formulario_contacto form{
+  padding: 6px;
+}
+
+input{
+  background-color: hsla(0, 0%, 97%, 0.933);
+  height: 30px;
+  width: 400px;
+}
+
+.boton{
+  width: auto;
+  padding: 0px 6px 0px 6px;
+}
+
+option{
+  background-color: hsla(0, 0%, 97%, 0.933);
+}
+
+textarea{
+  background-color: hsla(0, 0%, 97%, 0.933);
+  font-family: Arial, Helvetica, sans-serif
+}
+
+form{
+  padding: 15px 0px 15px;
+}
+
+footer{
+  height: 400px;
+  width: 100%;
+  background-color: rgb(6, 40, 61);
+  color: hsla(0, 0%, 97%, 0.933);
+  padding: 10px 20px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  grid-template-columns: 15% 30% 55%;
+  grid-template-rows: 1fr;
+  align-items: flex-start;  
+}
+
+
+
+
+.info_util ul a{
+  text-decoration: none;
+  color: hsla(0, 0%, 97%, 0.933);
+  text-transform: capitalize;
+}
+
+footer li{
+  margin: 0px 10px 0px;
+  padding: 15px;
+}
+
+footer .mapa{
+  height: max-content;
+  width: auto;
+}
+
+.redes{
+  height: 50px;
+  width: 150px;
+  font-size: 45px;
+  position: fixed;
+  left: 5px;
+  top: 30%;
+}  
+
+.redes a{
+  color: rgb(6, 40, 61);
+}
+
+.subir{
+  height: 65px;
+  width: 65px;
+  color: rgb(28, 101, 140);
+  font-size: 60px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1075px) {
+  .contenedor{ 
+    width: 809px;
+  }
+  .rubro{
+    width: 200px;
+  }
+  .rubros_home h2{
+    font-size: 40px;
+  }
+  .quienes_somos{
+    height: 850px ;
+    font-size: 14px;
+  }
+  
+  .quienes_somos h1{    
+    height: 120px;
+    font-size: 20px;
+    font-weight: 150;
+    width: 20%;
+  }
+  
+  .contenedor_qs img{
+    width: auto;
+    height: 200px;
+    padding: 10px;
+  }
+  
+  .contenedor_qs p{
+    width: 350px;
+    height: 220px;
+    padding: 40px;
+    text-align: justify;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  header{
+    height: 140px;
+    width: 100%;
+  }
+  .info_header{
+    display: none;    
+  }
+  .logo{
+    font-size: 8px;
+  }
+  .logo img{
+    height: 80px;
+    width: auto;
+  }
+  .marquee_home img{
+    height: 80px;
+    width: auto;
+    padding: 5px 0px;
+  }
+
+  
+
+  footer{
+    font-size: 12px; 
+    height: 280px;   
+  }
+  .mapa iframe{
+    height: 250px;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu{
+    display: none;       
+  }
+
+  .rubros_home h2{
+    font-size: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+  }
+
+  .contenedor{ 
+    width: auto;
+    height: 700px;
+    padding: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "item1 item2" 
+                         "item3 item4"
+                         "item5 item6" 
+                         "item7 item8";
+  }
+  .marquee2{
+    display: none;
+  }
+  .quienes_somos{
+    height: 1650px ;
+    font-size: 12px;
+    display: block;
+
+  }
+  
+  .quienes_somos h1{    
+    height: 100px;
+    font-size: 18px;
+    font-weight: 150;
+    width: 20%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .contenedor_qs{
+    display: block;
+    text-align: center;
+  }
+
+  
+  .contenedor_qs img{
+    width: auto;
+    height: 200px;
+    padding: 10px;
+    text-align: center;    
+  }
+  
+  .contenedor_qs p{
+    width: 250px;
+    height: 200px;
+    padding: 25px;
+    text-align: center;
+    
+  }
+
+  footer{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    font-size: 12px; 
+  }
+  .mapa iframe{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 320px) {
+  .menu{
+    display: none;       
+  }
+  footer{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    font-size: 12px; 
+    height: 80px;   
+  }
+  .mapa iframe{
+    display: none;
+  }
+  footer li{
+    display: inline-block;
+    padding: 0;
+  } 
+  .info_util{
+    display: none;
+  }
+}
+
