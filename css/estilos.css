@@ -123,6 +123,8 @@ ul{
 
 
 main{
+  height: 120vh;
+  width: 100%;
   background-color: hsla(0, 0%, 97%, 0.933);
   background-image: linear-gradient(to bottom,hsla(0, 0%, 97%, 0.419),hsla(0, 0%, 97%, 0.347)), url(../multimedia/fondo.jpg);
   background-size: cover;
@@ -329,13 +331,13 @@ main{
 
 .novedades{
   background-image: url(../multimedia/fondo_novedades.jpg);
-  height: 1250px;
+  height: 1300px;
   background-size: cover;
   background-position: center;
 }
 
 #novedades{
-  height: 50px;
+  height: 65px;
   background-color: #06283d;
   margin-bottom: -5px;
   font-family: led ,'Wendy One', sans-serif;
