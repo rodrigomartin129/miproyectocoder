@@ -1,0 +1,779 @@
+@font-face {
+  font-family: oddly;
+  src: url(../fonts/Oddly\ Calming\ DEMO.ttf);
+}
+
+@font-face {
+  font-family: lg;
+  src: url(../fonts/LuckiestGuy-Regular.ttf);
+}
+
+@font-face {
+  font-family: led;
+  src: url(../fonts/LEDBDREV.TTF);
+}
+
+$color1: rgb(57, 138, 185);
+$color2: rgb(28, 101, 140);
+$color3: rgb(6, 40, 61);
+$color4: rgb(255, 255, 255);
+$color5: rgba(247, 247, 247, 0.933);
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  width: 100%;
+}
+
+header{
+  height: 240px;
+  width: auto;
+  background-color: $color1;
+  font-family: oddly, cursive;
+  padding: 10px 20px;
+  color: $color2;
+}
+
+.navbar{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "img1 img2"
+                       "img1 img3" ;
+  align-items: flex-start; 
+  justify-items: flex-start; 
+}
+
+.logo{
+  font-family: lg;
+  text-transform: uppercase;
+  color: $color3 !important;
+  text-shadow: 0 0 10px $color4;
+  text-align: center;
+  grid-area: img1;
+  text-decoration: none !important;
+
+  h1{
+    font-size: 2em;
+  }
+
+  span{
+    color: $color5;
+    text-shadow: 0 0 10px $color3;  
+  }
+
+  img{
+    height: 120px;
+    width: auto;
+  }
+}
+
+.info_header{
+  color: $color3;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: $color3 1px solid;
+  height: 20px;
+  width: fit-content;
+  grid-area: img2;
+  justify-self: center;
+
+  h2{
+    display: inline;
+    padding: 0 10px;
+    font-size: 12px;  
+  }
+}
+
+.navbar-toggler{
+  justify-self: right; 
+}
+
+.navbar-collapse{
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 30px;
+  background-color:$color1;
+
+  ul{
+    li{
+      display: inline-block;
+      text-transform: capitalize;
+      padding: 5px;
+    }
+
+    a{
+      color: $color5 !important;
+    }
+
+    a:hover{
+      color: $color3 !important;
+      transform: scale(1.3, 1.6);
+      text-shadow: 1px 1px 1px $color5;
+    }
+  } 
+}
+
+ul{
+  list-style: none;
+}
+
+main{
+  background-color: $color5;
+  background-image: linear-gradient(to bottom,hsla(0, 0%, 97%, 0.419),hsla(0, 0%, 97%, 0.347)), url(../multimedia/fondo.jpg);
+  background-size: cover;
+  background-position: left;
+}
+
+#contacto{
+  height: 120vh;
+  width: 100%;
+}
+
+.rubros_home{ 
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  h2{
+    font-size: 50px;
+    height: auto;
+    width: 100vmax;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: oddly, cursive;
+    letter-spacing: 2px;
+    color: $color5;
+    text-shadow: 3px 3px $color3;
+  }
+}
+
+.contenedor{ 
+  width: 1009px;
+  height: 380px;
+  display: grid;
+  padding: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "item1 item2 item3 item4"
+                       "item5 item6 item7 item8";
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+@for $n from 1 through 8{
+  .rubro#{$n} {
+    grid-area: item+$n;
+  }
+}
+
+.rubro{
+  height: 160px;
+  width: 270px;
+  background-color: $color4;
+  border: 4px inset rgba(255, 255, 255, 0.457);
+  text-align: center;
+  line-height: 270px;  
+  color: $color3;
+  font-family: lg;
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: capitalize;
+  opacity: 0.6;
+
+  img{
+    height: auto;
+    width: 110px;
+    position: absolute;
+  }
+
+  a{
+    text-decoration: none;  
+  }
+}
+
+.rubro:hover{
+  opacity: 1;
+  border: 3px outset $color4;
+}
+
+.marquee_home img{
+  height: 80px;
+  width: auto;
+  padding: 5px 0px;
+  
+}
+
+.quienes_somos{
+  height: 1450px ;
+  width: 100%;
+  font-size: 20px;
+  color: $color3;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: hsl(0, 0%, 97%);
+  background-size: contain;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+
+  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+    width: 30%;
+    text-align: center;
+    display: inline-table;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    strong{
+      font-weight: bold;
+    }
+  }
+}
+
+.contenedor_qs{  
+  display: grid;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  img{
+    width: auto;
+    height: 300px;
+    padding: 10px;
+  }
+
+  p{
+    width: 500px;
+    height: 400px;
+    padding: 50px;
+    text-align: justify;
+  }
+}
+
+.productos{
+  height: 1100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+
+  h1{
+    text-align: center;
+    background-color: $color4;
+    font-family: 'Bangers', cursive;
+    font-size: 46px;
+    padding: 5px;
+    color: $color3;
+    text-shadow: 0 0 5px $color1;
+    letter-spacing: 2px;
+  }
+
+  table{
+    margin: 40px 65px;
+    background-color: $color4;
+    padding: 10px;
+  }
+
+  img{
+    width: 220px;
+    height: auto;   
+  }
+
+  li{
+    font-size: 18px;
+  }
+
+  th{
+    padding: 0px 20px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $color3;
+  }
+
+  td{
+    padding: 0px 20px;
+    border-bottom: 1px solid $color3;
+  }
+}
+
+.precio{
+  font-size: 18px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.novedades{
+  background-image: url(../multimedia/fondo_novedades.jpg);
+  height: 1300px;
+  background-size: cover;
+  background-position: center;
+
+  h2{ 
+    text-align: center;
+    background-color: rgb(57, 138, 185);
+    font-family: 'Bangers', cursive;
+    font-size: 32px;
+    padding: 5px;
+    color: $color3;
+    text-shadow: 0 0 10px $color4;
+  }
+}
+
+#novedades{
+  height: 65px;
+  background-color: $color3;
+  margin-bottom: -6px;
+  font-family: led ,'Wendy One', sans-serif;
+  color: #ec0404;
+  font-size: 40px;
+  text-transform: uppercase;
+  padding: 4px;
+}
+
+article{
+  padding: 20px;
+}
+
+.cont{
+  text-align: center;
+}
+
+#contacto{
+  height: 1300px;
+}
+
+.formulario_contacto{
+  width: 85%;
+  color: $color3;
+  background-color: rgb(216, 210, 203);
+  float:left;
+  border: 3px solid $color5 ;
+  margin-left: 100px;
+  margin-top: 80px;
+  padding: 15px;
+  font-size: 24px;
+  font-family: 'Bangers', cursive;
+
+  h1{
+    font-size: 40px;
+    font-family: 'Bangers', cursive;
+  }
+
+  form{
+    padding: 6px;
+  }
+}
+
+input{
+  background-color: $color5;
+  height: 30px;
+  width: 75%;
+}
+
+.newsletter{
+  display: inline-block;
+
+  input{
+    width: 30px;
+  }
+}
+
+.boton{
+  width: auto;
+  padding: 0px 6px 0px 6px;
+}
+
+.estado_civil option{
+  background-color: $color5;
+}
+
+textarea{
+  background-color: $color5;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 95%;
+}
+
+form{
+  padding: 15px 0px 15px;
+}
+
+footer{
+  height: 400px;
+  width: 100%;
+  background-color: $color3;
+  color: $color5;
+  padding: 10px 20px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  grid-template-columns: 15% 30% 55%;
+  grid-template-rows: 1fr;
+  align-items: flex-start;  
+
+  li{
+    margin: 0px 10px 0px;
+    padding: 15px;
+  }
+
+  .mapa{
+    height: max-content;
+    width: auto;
+  }
+}
+
+.info_util ul a{
+  text-decoration: none;
+  color: $color5;
+  text-transform: capitalize;
+}
+
+.redes{
+  height: 150px;
+  width: 50px;
+  font-size: 45px;
+  position: fixed;
+  left: 5px;
+  top: 30%;
+  display: block;
+
+  a{
+    color: $color3;
+    text-shadow: 0 0 10px $color4;
+  }
+
+  i{
+    transition: 1.1s;
+  }
+
+  i:hover{
+    transform: rotate(360deg);
+    transition: 1.1s;
+  }
+}  
+
+#redes_novedades a{
+  color: hsl(0, 0%, 97%);
+  text-shadow: 0 0 10px $color3;
+}
+
+.subir{
+  height: 65px;
+  width: 65px;
+  color: rgb(28, 101, 140);
+  font-size: 60px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1075px) {
+  .contenedor{ 
+    width: 809px;
+  }
+  .rubro{
+    width: 200px;
+  }
+  .rubros_home h2{
+    font-size: 40px;
+  }
+  .quienes_somos{
+    height: 900px ;
+    font-size: 14px;
+    h1{    
+      height: 120px;
+      font-size: 20px;
+      font-weight: 150;
+      width: 20%;
+    }
+  }
+  .contenedor_qs img{
+    width: auto;
+    height: 200px;
+    padding: 10px;
+  }
+  .contenedor_qs p{
+    width: 350px;
+    height: 220px;
+    padding: 40px;
+    text-align: justify;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .info_header{
+    display: none;    
+  }
+  .marquee_home img{
+    height: 80px;
+    width: auto;
+    padding: 5px 0px;
+  }
+  .productos{
+    height: 450px;
+    h1{
+      font-size: 32px;
+      padding: 5px;
+    }
+    table{
+      margin: 30px 65px;
+      background-color: $color4;
+      font-size: 18px;
+      padding: 10px;
+    }
+    img{
+      width: 80px;
+      height: auto;   
+    }
+    li{
+      font-size: 14px;
+    }
+    td{
+      padding: 0px 12px;
+    }
+    th{
+      padding: 0px 12px;
+    }
+  }
+  .precio{
+    font-size: 18px;
+  }
+  footer{
+    font-size: 12px; 
+    height: 280px;   
+  }
+  .mapa iframe{
+    height: 250px;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .menu{
+    display: none;       
+  }
+  .rubros_home h2{
+    font-size: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+  }
+  .contenedor{ 
+    width: auto;
+    height: 700px;
+    padding: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "item1 item2" 
+                         "item3 item4"
+                         "item5 item6" 
+                         "item7 item8";
+  }
+  .marquee2{
+    display: none;
+  }
+  .quienes_somos{
+    height: 1200px ;
+    font-size: 12px;
+    display: flexbox;
+    justify-self: end;
+    h1{    
+      height: 100px;
+      font-size: 18px;
+      font-weight: 150;
+      width: 20%;
+      text-align: center;
+    }
+  }
+  .contenedor_qs{
+    display: inline-block;
+    text-align: center;
+    img{
+      width: auto;
+      height: 200px;
+      padding: 10px;
+      text-align: center;    
+    }
+    p{
+      width: auto;
+      height: 150px;
+      padding: 10px;
+      margin: 0;
+      text-align: center;
+      justify-self: center;
+    }
+  }
+  .productos{
+    height: 400px;
+    h1{
+      font-size: 28px;
+      padding: 5px;
+    }
+    table{
+      margin: 10px 14px;
+      background-color: $color4;
+      font-size: 12px;
+      padding: 10px;
+    }
+    img{
+      width: 60px;
+      height: auto;   
+    }
+    li{
+      font-size: 10px;
+    }
+    td{
+      padding: 0px 12px;
+    }
+    th{
+      padding: 0px 12px;
+    }
+  }
+  .precio{
+    font-size: 12px;
+  }
+  .novedades{
+    height: 970px;
+  }
+  #novedades{
+    height: 65px;
+    font-size: 40px;
+    padding: 4px;
+  }
+  .cont iframe{
+    width: 400px;
+    height: 200px;
+  }
+  .formulario_contacto{
+    width: 90%; 
+    margin-left: 40px; 
+    margin-top: 10px; 
+    font-size: 20px; 
+  }
+  #contacto{
+    height: 900px;
+  }
+  input{
+    margin-left: 30px;
+  }
+  textarea{
+    font-size: 16px;
+  }
+  footer{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    font-size: 12px; 
+  }
+  .mapa iframe{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .menu{
+    display: none;       
+  }
+  .contenedor_qs p{
+    width: 300px;
+    margin-left: 40px;
+  }
+  .productos{
+    height: 350px;
+    table{
+      margin: 2px 3px;
+      padding: 2px;
+    }
+    img{
+      width: 50px;
+    }
+    td{
+      padding: 0px 5px;
+    }
+    th{
+      padding: 0px 5px;
+    }
+  }
+  .medidas{
+    display: none;
+  }
+  .novedades{
+    height: 900px;
+  }
+  #novedades{
+    height: 45px;
+    font-size: 25px;
+    padding: 4px;
+  }
+  .cont iframe{
+    width: 250px;
+    height: 150px;
+  }
+  .formulario_contacto{
+    width: 95%; 
+    margin-left: 10px; 
+    margin-top: 5px; 
+    font-size: 20px; 
+    h1{
+      font-size: 30px;
+    }
+  }
+  #contacto{
+    height: 1050px;
+  }
+  input{
+    margin-left: 30px;
+  }
+  textarea{
+    font-size: 16px;
+  }
+  .cont iframe{
+    width: 350px;
+    height: 180px;
+  }
+  footer{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 80px;  
+    li{
+      display: inline-block;
+      padding: 0;
+    } 
+  }
+  .mapa iframe{
+    display: none;
+  }
+  .info_util{
+    display: none;    
+  }
+  .redes{
+    position: relative;
+    left: 220px;
+    bottom: 60px;
+    font-size: 25px;
+    display: inline;
+    a{
+      color: hsl(0, 0%, 97%);  
+      text-shadow: none;
+    }
+  }
+  .subir{
+    display: none;
+  }
+}
+
