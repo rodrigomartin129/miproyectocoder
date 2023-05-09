@@ -462,8 +462,25 @@ footer .mapa {
   right: 50px;
   bottom: 50px;
   text-decoration: none;
+  animation-duration: 5s;
+  animation-name: desaparecer;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
+@keyframes desaparecer {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 1075px) {
   .contenedor {
     width: 809px;
