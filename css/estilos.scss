@@ -532,7 +532,10 @@ footer{
     padding: 20px;
     text-align: justify;
   }
-  
+  .mapa iframe{
+    height: 300px;
+    width: 500px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
