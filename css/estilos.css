@@ -684,6 +684,10 @@ footer .mapa {
   .menu {
     display: none;
   }
+  .rubro {
+    width: 150px;
+    font-size: 16px;
+  }
   .contenedor_qs p {
     width: 300px;
     margin-left: 40px;
