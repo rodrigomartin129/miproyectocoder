@@ -75,7 +75,7 @@ header {
 .info_header h2 {
   display: inline;
   padding: 0 10px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .navbar-toggler {
@@ -454,10 +454,10 @@ footer .mapa {
 }
 
 .subir {
-  height: 65px;
-  width: 65px;
+  height: 40px;
+  width: 40px;
   color: rgb(28, 101, 140);
-  font-size: 60px;
+  font-size: 40px;
   position: fixed;
   right: 50px;
   bottom: 50px;
@@ -623,7 +623,7 @@ footer .mapa {
     padding: 5px;
   }
   .productos table {
-    margin: 10px 14px;
+    margin: 30px 50px;
     background-color: rgb(255, 255, 255);
     font-size: 12px;
     padding: 10px;
