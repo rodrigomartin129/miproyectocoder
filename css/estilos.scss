@@ -13,11 +13,11 @@
   src: url(../fonts/LEDBDREV.TTF);
 }
 
-$color1: rgb(57, 138, 185);
-$color2: rgb(28, 101, 140);
+$color1: #398ab9;
+$color2: #1c658c;
 $color3: rgb(6, 40, 61);
 $color4: rgb(255, 255, 255);
-$color5: rgba(247, 247, 247, 0.933);
+$color5: #f7f7f7ee;
 
 
 
@@ -50,7 +50,7 @@ header{
   grid-template-rows: 20% 80%;
   grid-template-areas: "img1 img2"
                        "img1 img3" ;
-  align-items: flex-start; 
+  align-items: start; 
   justify-items: flex-start; 
 }
 
@@ -83,7 +83,7 @@ header{
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: $color3 1px solid;
   height: 20px;
-  width: fit-content;
+  // width: fit-content (); 
   grid-area: img2;
   justify-self: center;
 
@@ -95,7 +95,8 @@ header{
 }
 
 .navbar-toggler{
-  justify-self: right; 
+  justify-self: right;
+  grid-area: img3; 
 }
 
 .navbar-collapse{
@@ -104,6 +105,7 @@ header{
   text-align: center;
   padding-bottom: 30px;
   background-color:$color1;
+  grid-area: img3;
 
   ul{
     li{
@@ -225,8 +227,9 @@ main{
   color: $color3;
   display: flex;
   flex-wrap: wrap;
-  background-color: hsl(0, 0%, 97%);
-  background-size: contain;
+  background-color: #f7f7f7;
+  background-image: url(../multimedia/blob-scene-haikei.svg);
+  background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
 
@@ -238,7 +241,7 @@ main{
     text-align: center;
     display: inline-table;
     padding: 10px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 
     strong{
       font-weight: bold;
@@ -309,7 +312,7 @@ main{
   }
 
   td{
-    padding: 0px 20px;
+    padding: 0px 10px;
     border-bottom: 1px solid $color3;
   }
 }
@@ -362,7 +365,7 @@ article{
 .formulario_contacto{
   width: 85%;
   color: $color3;
-  background-color: rgb(216, 210, 203);
+  background-color: #d8d2cb;
   float:left;
   border: 3px solid $color5 ;
   margin-left: 100px;
@@ -383,7 +386,7 @@ article{
 
 input{
   background-color: $color5;
-  height: 30px;
+  height: 40px;
   width: 75%;
 }
 
@@ -397,7 +400,7 @@ input{
 
 .boton{
   width: auto;
-  padding: 0px 6px 0px 6px;
+  padding: 5px;
 }
 
 .estado_civil option{
@@ -516,7 +519,7 @@ footer{
     font-size: 14px;
     h3{    
       height: 120px;
-      font-size: 20px;
+      font-size: 30px;
       font-weight: 150;
       width: 20%;
     }
@@ -532,13 +535,16 @@ footer{
     padding: 20px;
     text-align: justify;
   }
+  .productos{
+    font-size: 22px;
+  }
   .mapa iframe{
     height: 300px;
     width: 500px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 940px) {
   .info_header{
     display: none;    
   }
@@ -548,7 +554,7 @@ footer{
     padding: 5px 0px;
   }
   .productos{
-    height: 450px;
+    height: 750px;
     h3{
       font-size: 32px;
       padding: 5px;
@@ -556,11 +562,11 @@ footer{
     table{
       margin: 30px 65px;
       background-color: $color4;
-      font-size: 18px;
+      font-size: 20px;
       padding: 10px;
     }
     img{
-      width: 80px;
+      width: 150px;
       height: auto;   
     }
     li{
@@ -586,7 +592,7 @@ footer{
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 810px) {
   .menu{
     display: none;       
   }
@@ -610,13 +616,13 @@ footer{
     display: none;
   }
   .quienes_somos{
-    height: 1200px ;
-    font-size: 12px;
-    display: flexbox;
-    justify-self: end;
+    height: 1300px ;
+    // font-size: 12px;
+    // display: flex;
+    // justify-self: end;
     h3{    
       height: 100px;
-      font-size: 18px;
+      // font-size: 25px;
       font-weight: 150;
       width: 20%;
       text-align: center;
@@ -641,33 +647,33 @@ footer{
     }
   }
   .productos{
-    height: 400px;
+    height: 550px;
     h3{
       font-size: 28px;
       padding: 5px;
     }
     table{
-      margin: 30px 50px;
+      // margin: 30px 50px;
       background-color: $color4;
-      font-size: 12px;
+      font-size: 16px;
       padding: 10px;
     }
     img{
-      width: 60px;
+      width: 100px;
       height: auto;   
     }
     li{
-      font-size: 10px;
+      font-size: 12px;
     }
-    td{
-      padding: 0px 12px;
-    }
-    th{
-      padding: 0px 12px;
-    }
+    // td{
+    //   padding: 0px 12px;
+    // }
+    // th{
+    //   padding: 0px 12px;
+    // }
   }
   .precio{
-    font-size: 12px;
+    font-size: 15px;
   }
   .novedades{
     height: 970px;
@@ -688,7 +694,7 @@ footer{
     font-size: 20px; 
   }
   #contacto{
-    height: 900px;
+    height: 1100px;
   }
   input{
     margin-left: 30px;
@@ -705,23 +711,104 @@ footer{
     display: none;
   }
 }
-
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 640px) {
   .menu{
     display: none;       
+  }
+  .navbar-collapse{
+    width: 120px;
+    font-size: 19px;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+  header{
+    height: auto;
+  }
+  .productos{
+    height: 600px;
+    table{
+      margin: 30px 48px;
+      // background-color: $color4;
+      font-size: 14px;
+      padding: 10px;
+    }
+    img{
+      // width: 60px;
+      // height: auto;   
+    }
+    li{
+      font-size: 12px;
+    }
+    .precio{
+      font-size: 12px;
+    }
+    td{
+      padding: 0px 9px;
+    }
+    th{
+      padding: 0px 9px;
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .navbar{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "img1 img3"
+                         "img1 img3" ;
+  }
+  .quienes_somos h3{
+    font-size: 20px;
+  }
+  .productos {
+    height: 450px;
+    img{
+      width: 70px;
+    }
+    table{
+      font-size: 13px;
+      padding: 8px;
+    }
+  }  
+  .medidas{
+    display: none;
+  }
+  .cont iframe{
+    width: 370px;
+    // height: 180px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .navbar {
+    padding: 0;
+  }
+  .logo h1{
+    font-size: 1.5em;
   }
   .rubro{
     width: 150px;
     font-size: 16px;
   }
-  .contenedor_qs p{
-    width: 300px;
-    margin-left: 40px;
+  .quienes_somos {
+    font-size: 12px;
+    h3{
+      font-size: 16px;
+    }
   }
+  .contenedor_qs { 
+    p{
+      width: 300px;
+      margin-left: 15px;
+    }
+    img {
+      max-width: 300px;
+    }
+  }  
   .productos{
     height: 350px;
     table{
-      margin: 2px 3px;
+      margin: 2px 28px;
+      font-size: 12px;
       padding: 2px;
     }
     img{
@@ -733,12 +820,15 @@ footer{
     th{
       padding: 0px 5px;
     }
+    .precio{
+      font-size: 10px;
+    }
   }
   .medidas{
     display: none;
   }
   .novedades{
-    height: 900px;
+    height: 850px;
   }
   #novedades{
     height: 45px;
@@ -746,8 +836,8 @@ footer{
     padding: 4px;
   }
   .cont iframe{
-    width: 250px;
-    height: 150px;
+    width: 280px;
+    height: 170px;
   }
   .formulario_contacto{
     width: 95%; 
@@ -758,18 +848,14 @@ footer{
       font-size: 30px;
     }
   }
-  #contacto{
-    height: 1050px;
-  }
+  // #contacto{
+  //   height: 1100px;
+  // }
   input{
     margin-left: 30px;
   }
   textarea{
     font-size: 16px;
-  }
-  .cont iframe{
-    width: 350px;
-    height: 180px;
   }
   footer{
     grid-template-columns: 1fr;
@@ -786,6 +872,14 @@ footer{
   .info_util{
     display: none;    
   }
+  .subir{
+    display: none;
+  }
+  .redes{
+    font-size: 27px;
+  }
+}
+@media only screen and (max-width: 320px) {
   .redes{
     position: relative;
     left: 220px;
@@ -797,8 +891,4 @@ footer{
       text-shadow: none;
     }
   }
-  .subir{
-    display: none;
-  }
 }
-

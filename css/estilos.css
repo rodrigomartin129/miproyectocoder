@@ -27,10 +27,10 @@ body {
 header {
   height: 240px;
   width: auto;
-  background-color: rgb(57, 138, 185);
+  background-color: #398ab9;
   font-family: oddly, cursive;
   padding: 10px 20px;
-  color: rgb(28, 101, 140);
+  color: #1c658c;
 }
 
 .navbar {
@@ -38,7 +38,7 @@ header {
   grid-template-columns: 30% 70%;
   grid-template-rows: 20% 80%;
   grid-template-areas: "img1 img2" "img1 img3";
-  align-items: flex-start;
+  align-items: start;
   justify-items: flex-start;
 }
 
@@ -55,7 +55,7 @@ header {
   font-size: 2em;
 }
 .logo span {
-  color: rgba(247, 247, 247, 0.933);
+  color: rgba(247, 247, 247, 0.9333333333);
   text-shadow: 0 0 10px rgb(6, 40, 61);
 }
 .logo img {
@@ -68,7 +68,6 @@ header {
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: rgb(6, 40, 61) 1px solid;
   height: 20px;
-  width: fit-content;
   grid-area: img2;
   justify-self: center;
 }
@@ -80,6 +79,7 @@ header {
 
 .navbar-toggler {
   justify-self: right;
+  grid-area: img3;
 }
 
 .navbar-collapse {
@@ -87,7 +87,8 @@ header {
   font-size: 22px;
   text-align: center;
   padding-bottom: 30px;
-  background-color: rgb(57, 138, 185);
+  background-color: #398ab9;
+  grid-area: img3;
 }
 .navbar-collapse ul li {
   display: inline-block;
@@ -95,12 +96,12 @@ header {
   padding: 5px;
 }
 .navbar-collapse ul a {
-  color: rgba(247, 247, 247, 0.933) !important;
+  color: rgba(247, 247, 247, 0.9333333333) !important;
 }
 .navbar-collapse ul a:hover {
   color: rgb(6, 40, 61) !important;
   transform: scale(1.3, 1.6);
-  text-shadow: 1px 1px 1px rgba(247, 247, 247, 0.933);
+  text-shadow: 1px 1px 1px rgba(247, 247, 247, 0.9333333333);
 }
 
 ul {
@@ -108,7 +109,7 @@ ul {
 }
 
 main {
-  background-color: rgba(247, 247, 247, 0.933);
+  background-color: rgba(247, 247, 247, 0.9333333333);
   background-image: linear-gradient(to bottom, hsla(0, 0%, 97%, 0.419), hsla(0, 0%, 97%, 0.347)), url(../multimedia/fondo.jpg);
   background-size: cover;
   background-position: left;
@@ -134,7 +135,7 @@ main {
   text-transform: uppercase;
   font-family: oddly, cursive;
   letter-spacing: 2px;
-  color: rgba(247, 247, 247, 0.933);
+  color: rgba(247, 247, 247, 0.9333333333);
   text-shadow: 3px 3px rgb(6, 40, 61);
 }
 
@@ -225,8 +226,9 @@ main {
   color: rgb(6, 40, 61);
   display: flex;
   flex-wrap: wrap;
-  background-color: hsl(0, 0%, 97%);
-  background-size: contain;
+  background-color: #f7f7f7;
+  background-image: url(../multimedia/blob-scene-haikei.svg);
+  background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
 }
@@ -238,7 +240,6 @@ main {
   text-align: center;
   display: inline-table;
   padding: 10px;
-  margin-bottom: 20px;
 }
 .quienes_somos h3 strong {
   font-weight: bold;
@@ -279,7 +280,7 @@ main {
   font-size: 46px;
   padding: 5px;
   color: rgb(6, 40, 61);
-  text-shadow: 0 0 5px rgb(57, 138, 185);
+  text-shadow: 0 0 5px #398ab9;
   letter-spacing: 2px;
 }
 .productos table {
@@ -300,7 +301,7 @@ main {
   border-bottom: 2px solid rgb(6, 40, 61);
 }
 .productos td {
-  padding: 0px 20px;
+  padding: 0px 10px;
   border-bottom: 1px solid rgb(6, 40, 61);
 }
 
@@ -351,9 +352,9 @@ article {
 .formulario_contacto {
   width: 85%;
   color: rgb(6, 40, 61);
-  background-color: rgb(216, 210, 203);
+  background-color: #d8d2cb;
   float: left;
-  border: 3px solid rgba(247, 247, 247, 0.933);
+  border: 3px solid rgba(247, 247, 247, 0.9333333333);
   margin-left: 100px;
   margin-top: 80px;
   padding: 15px;
@@ -369,8 +370,8 @@ article {
 }
 
 input {
-  background-color: rgba(247, 247, 247, 0.933);
-  height: 30px;
+  background-color: rgba(247, 247, 247, 0.9333333333);
+  height: 40px;
   width: 75%;
 }
 
@@ -383,15 +384,15 @@ input {
 
 .boton {
   width: auto;
-  padding: 0px 6px 0px 6px;
+  padding: 5px;
 }
 
 .estado_civil option {
-  background-color: rgba(247, 247, 247, 0.933);
+  background-color: rgba(247, 247, 247, 0.9333333333);
 }
 
 textarea {
-  background-color: rgba(247, 247, 247, 0.933);
+  background-color: rgba(247, 247, 247, 0.9333333333);
   font-family: Arial, Helvetica, sans-serif;
   width: 95%;
 }
@@ -404,7 +405,7 @@ footer {
   height: 400px;
   width: 100%;
   background-color: rgb(6, 40, 61);
-  color: rgba(247, 247, 247, 0.933);
+  color: rgba(247, 247, 247, 0.9333333333);
   padding: 10px 20px 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: grid;
@@ -423,7 +424,7 @@ footer .mapa {
 
 .info_util ul a {
   text-decoration: none;
-  color: rgba(247, 247, 247, 0.933);
+  color: rgba(247, 247, 247, 0.9333333333);
   text-transform: capitalize;
 }
 
@@ -497,7 +498,7 @@ footer .mapa {
   }
   .quienes_somos h3 {
     height: 120px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 150;
     width: 20%;
   }
@@ -512,12 +513,15 @@ footer .mapa {
     padding: 20px;
     text-align: justify;
   }
+  .productos {
+    font-size: 22px;
+  }
   .mapa iframe {
     height: 300px;
     width: 500px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 940px) {
   .info_header {
     display: none;
   }
@@ -527,7 +531,7 @@ footer .mapa {
     padding: 5px 0px;
   }
   .productos {
-    height: 450px;
+    height: 750px;
   }
   .productos h3 {
     font-size: 32px;
@@ -536,11 +540,11 @@ footer .mapa {
   .productos table {
     margin: 30px 65px;
     background-color: rgb(255, 255, 255);
-    font-size: 18px;
+    font-size: 20px;
     padding: 10px;
   }
   .productos img {
-    width: 80px;
+    width: 150px;
     height: auto;
   }
   .productos li {
@@ -564,7 +568,7 @@ footer .mapa {
     width: 300px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 810px) {
   .menu {
     display: none;
   }
@@ -585,14 +589,10 @@ footer .mapa {
     display: none;
   }
   .quienes_somos {
-    height: 1200px;
-    font-size: 12px;
-    display: flexbox;
-    justify-self: end;
+    height: 1300px;
   }
   .quienes_somos h3 {
     height: 100px;
-    font-size: 18px;
     font-weight: 150;
     width: 20%;
     text-align: center;
@@ -616,33 +616,26 @@ footer .mapa {
     justify-self: center;
   }
   .productos {
-    height: 400px;
+    height: 550px;
   }
   .productos h3 {
     font-size: 28px;
     padding: 5px;
   }
   .productos table {
-    margin: 30px 50px;
     background-color: rgb(255, 255, 255);
-    font-size: 12px;
+    font-size: 16px;
     padding: 10px;
   }
   .productos img {
-    width: 60px;
+    width: 100px;
     height: auto;
   }
   .productos li {
-    font-size: 10px;
-  }
-  .productos td {
-    padding: 0px 12px;
-  }
-  .productos th {
-    padding: 0px 12px;
+    font-size: 12px;
   }
   .precio {
-    font-size: 12px;
+    font-size: 15px;
   }
   .novedades {
     height: 970px;
@@ -663,7 +656,7 @@ footer .mapa {
     font-size: 20px;
   }
   #contacto {
-    height: 900px;
+    height: 1100px;
   }
   input {
     margin-left: 30px;
@@ -680,23 +673,96 @@ footer .mapa {
     display: none;
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 640px) {
   .menu {
     display: none;
+  }
+  .navbar-collapse {
+    width: 120px;
+    font-size: 19px;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+  header {
+    height: auto;
+  }
+  .productos {
+    height: 600px;
+  }
+  .productos table {
+    margin: 30px 48px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .productos li {
+    font-size: 12px;
+  }
+  .productos .precio {
+    font-size: 12px;
+  }
+  .productos td {
+    padding: 0px 9px;
+  }
+  .productos th {
+    padding: 0px 9px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "img1 img3" "img1 img3";
+  }
+  .quienes_somos h3 {
+    font-size: 20px;
+  }
+  .productos {
+    height: 450px;
+  }
+  .productos img {
+    width: 70px;
+  }
+  .productos table {
+    font-size: 13px;
+    padding: 8px;
+  }
+  .medidas {
+    display: none;
+  }
+  .cont iframe {
+    width: 370px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .navbar {
+    padding: 0;
+  }
+  .logo h1 {
+    font-size: 1.5em;
   }
   .rubro {
     width: 150px;
     font-size: 16px;
   }
+  .quienes_somos {
+    font-size: 12px;
+  }
+  .quienes_somos h3 {
+    font-size: 16px;
+  }
   .contenedor_qs p {
     width: 300px;
-    margin-left: 40px;
+    margin-left: 15px;
+  }
+  .contenedor_qs img {
+    max-width: 300px;
   }
   .productos {
     height: 350px;
   }
   .productos table {
-    margin: 2px 3px;
+    margin: 2px 28px;
+    font-size: 12px;
     padding: 2px;
   }
   .productos img {
@@ -708,11 +774,14 @@ footer .mapa {
   .productos th {
     padding: 0px 5px;
   }
+  .productos .precio {
+    font-size: 10px;
+  }
   .medidas {
     display: none;
   }
   .novedades {
-    height: 900px;
+    height: 850px;
   }
   #novedades {
     height: 45px;
@@ -720,8 +789,8 @@ footer .mapa {
     padding: 4px;
   }
   .cont iframe {
-    width: 250px;
-    height: 150px;
+    width: 280px;
+    height: 170px;
   }
   .formulario_contacto {
     width: 95%;
@@ -732,18 +801,11 @@ footer .mapa {
   .formulario_contacto h3 {
     font-size: 30px;
   }
-  #contacto {
-    height: 1050px;
-  }
   input {
     margin-left: 30px;
   }
   textarea {
     font-size: 16px;
-  }
-  .cont iframe {
-    width: 350px;
-    height: 180px;
   }
   footer {
     grid-template-columns: 1fr;
@@ -760,6 +822,14 @@ footer .mapa {
   .info_util {
     display: none;
   }
+  .subir {
+    display: none;
+  }
+  .redes {
+    font-size: 27px;
+  }
+}
+@media only screen and (max-width: 320px) {
   .redes {
     position: relative;
     left: 220px;
@@ -770,9 +840,6 @@ footer .mapa {
   .redes a {
     color: hsl(0, 0%, 97%);
     text-shadow: none;
-  }
-  .subir {
-    display: none;
   }
 }
 
