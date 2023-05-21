@@ -15,11 +15,9 @@
 
 $color1: #398ab9;
 $color2: #1c658c;
-$color3: rgb(6, 40, 61);
-$color4: rgb(255, 255, 255);
+$color3: #06283d;
+$color4: #ffffff;
 $color5: #f7f7f7ee;
-
-
 
 * {
   margin: 0;
@@ -62,16 +60,13 @@ header{
   text-align: center;
   grid-area: img1;
   text-decoration: none !important;
-
   h1{
     font-size: 2em;
   }
-
   span{
     color: $color5;
     text-shadow: 0 0 10px $color3;  
   }
-
   img{
     height: 120px;
     width: auto;
@@ -83,10 +78,8 @@ header{
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: $color3 1px solid;
   height: 20px;
-  // width: fit-content (); 
   grid-area: img2;
   justify-self: center;
-
   h2{
     display: inline;
     padding: 0 10px;
@@ -101,23 +94,20 @@ header{
 
 .navbar-collapse{
   width: 100%;
-  font-size: 22px;
+  font-size: 26px;
   text-align: center;
   padding-bottom: 30px;
   background-color:$color1;
   grid-area: img3;
-
   ul{
     li{
       display: inline-block;
       text-transform: capitalize;
       padding: 5px;
     }
-
     a{
       color: $color5 !important;
     }
-
     a:hover{
       color: $color3 !important;
       transform: scale(1.3, 1.6);
@@ -147,7 +137,6 @@ main{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   h3{
     font-size: 50px;
     height: auto;
@@ -171,10 +160,7 @@ main{
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "item1 item2 item3 item4"
                        "item5 item6 item7 item8";
-  justify-items: center;
-  align-items: center;
   justify-content: center;
-  align-content: center;
 }
 
 @for $n from 1 through 8{
@@ -196,13 +182,11 @@ main{
   font-weight: 100;
   text-transform: capitalize;
   opacity: 0.6;
-
   img{
     height: auto;
     width: 110px;
     position: absolute;
   }
-
   a{
     text-decoration: none;  
   }
@@ -217,11 +201,10 @@ main{
   height: 80px;
   width: auto;
   padding: 5px 0px;
-  
 }
 
 .quienes_somos{
-  height: 1450px ;
+  height: auto;
   width: 100%;
   font-size: 20px;
   color: $color3;
@@ -232,7 +215,6 @@ main{
   background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
-
   h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 35px;
@@ -241,8 +223,6 @@ main{
     text-align: center;
     display: inline-table;
     padding: 10px;
-    // margin-bottom: 20px;
-
     strong{
       font-weight: bold;
     }
@@ -251,20 +231,15 @@ main{
 
 .contenedor_qs{  
   display: grid;
-  padding: 30px;
+  padding: 0px 30px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-
   img{
     width: auto;
     height: 300px;
     padding: 10px;
   }
-
   p{
     width: 500px;
     height: 400px;
@@ -274,11 +249,10 @@ main{
 }
 
 .productos{
-  height: 1100px;
+  height: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 300;
-
   h3{
     text-align: center;
     background-color: $color4;
@@ -289,37 +263,58 @@ main{
     text-shadow: 0 0 5px $color1;
     letter-spacing: 2px;
   }
-
-  table{
-    margin: 40px 65px;
+  section{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px 40px;
+  }
+  .item{
+    height: 600px;
+    width: 400px;
+    padding: 20px;
+    margin: 10px;
     background-color: $color4;
-    padding: 10px;
+    border: 4px solid $color3;
+    border-radius: 12px;
+    box-shadow: inset 0 -10px 20px $color1;
+    text-align: center;
+    img{
+      height: 200px;
+      width: auto;
+      background-size: cover;
+      background-position: center;      
+    }
+    h4, h5, ul, li{
+      text-align: center;
+      padding: 3px;
+    }
+    h4{
+      font-weight: 1000;
+    }
+    h5{
+      font-size: 26px;
+      font-family: 'Luckiest Guy', cursive;
+      margin-bottom: 20px;
+    }
+    li{
+      font-size: 16px;
+    }
+    a{
+      background-color: $color3;
+      text-decoration: none;
+      color: $color1;
+      padding: 10px 20px;
+      border: 2px solid $color3;
+      border-radius: 10px;
+    }
+    a:hover{
+      background-color: $color4;
+    }
   }
-
-  img{
-    width: 220px;
-    height: auto;   
-  }
-
-  li{
-    font-size: 18px;
-  }
-
-  th{
-    padding: 0px 20px;
-    padding-bottom: 30px;
-    border-bottom: 2px solid $color3;
-  }
-
-  td{
-    padding: 0px 10px;
-    border-bottom: 1px solid $color3;
-  }
-}
-
-.precio{
-  font-size: 18px;
-  font-family: 'Luckiest Guy', cursive;
 }
 
 .novedades{
@@ -327,7 +322,6 @@ main{
   height: 1300px;
   background-size: cover;
   background-position: center;
-
   h3{ 
     text-align: center;
     background-color: rgb(57, 138, 185);
@@ -373,12 +367,10 @@ article{
   padding: 15px;
   font-size: 24px;
   font-family: 'Bangers', cursive;
-
   h3{
     font-size: 40px;
     font-family: 'Bangers', cursive;
   }
-
   form{
     padding: 6px;
   }
@@ -392,7 +384,6 @@ input{
 
 .newsletter{
   display: inline-block;
-
   input{
     width: 30px;
   }
@@ -422,18 +413,16 @@ footer{
   width: 100%;
   background-color: $color3;
   color: $color5;
-  padding: 10px 20px 10px;
+  padding: 10px 5px 10px 50px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: grid;
-  grid-template-columns: 15% 30% 55%;
+  grid-template-columns: 15% 25% 60%;
   grid-template-rows: 1fr;
   align-items: flex-start;  
-
   li{
     margin: 0px 10px 0px;
     padding: 15px;
   }
-
   .mapa{
     height: max-content;
     width: auto;
@@ -454,16 +443,13 @@ footer{
   left: 5px;
   top: 30%;
   display: block;
-
   a{
     color: $color3;
     text-shadow: 0 0 10px $color4;
   }
-
   i{
     transition: 1.1s;
   }
-
   i:hover{
     transform: rotate(360deg);
     transition: 1.1s;
@@ -478,7 +464,7 @@ footer{
 .subir{
   height: 40px;
   width: 40px;
-  color: rgb(28, 101, 140);
+  color: $color1;
   font-size: 40px;
   position: fixed;
   right: 50px;
@@ -515,7 +501,6 @@ footer{
     font-size: 40px;
   }
   .quienes_somos{
-    height: 900px ;
     font-size: 14px;
     h3{    
       height: 120px;
@@ -533,10 +518,9 @@ footer{
     width: 350px;
     height: 220px;
     padding: 20px;
-    text-align: justify;
   }
-  .productos{
-    font-size: 22px;
+  footer{
+    grid-template-columns: 15% 30% 55%;
   }
   .mapa iframe{
     height: 300px;
@@ -544,7 +528,7 @@ footer{
   }
 }
 
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 950px) {
   .info_header{
     display: none;    
   }
@@ -554,33 +538,24 @@ footer{
     padding: 5px 0px;
   }
   .productos{
-    height: 750px;
+    font-size: 16px;
     h3{
       font-size: 32px;
       padding: 5px;
     }
-    table{
-      margin: 30px 65px;
-      background-color: $color4;
-      font-size: 20px;
-      padding: 10px;
+    .item{
+      height: 450px;
+      width: 300px;
+      img{
+        height: 120px;
+      }
+      h4, ul, li{
+        margin: 0 !important;
+      }
+      li{
+        font-size: 12px;
+      }
     }
-    img{
-      width: 150px;
-      height: auto;   
-    }
-    li{
-      font-size: 14px;
-    }
-    td{
-      padding: 0px 12px;
-    }
-    th{
-      padding: 0px 12px;
-    }
-  }
-  .precio{
-    font-size: 18px;
   }
   footer{
     font-size: 12px; 
@@ -593,8 +568,8 @@ footer{
 }
 
 @media only screen and (max-width: 810px) {
-  .menu{
-    display: none;       
+  .navbar-collapse{
+    font-size: 22px;
   }
   .rubros_home h3{
     font-size: 30px;
@@ -616,72 +591,34 @@ footer{
     display: none;
   }
   .quienes_somos{
-    height: 1300px ;
-    // font-size: 12px;
-    // display: flex;
-    // justify-self: end;
     h3{    
       height: 100px;
-      // font-size: 25px;
-      font-weight: 150;
-      width: 20%;
-      text-align: center;
     }
   }
   .contenedor_qs{
-    display: inline-block;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr;
     text-align: center;
-    img{
-      width: auto;
-      height: 200px;
-      padding: 10px;
-      text-align: center;    
-    }
     p{
       width: auto;
-      height: 150px;
-      padding: 10px;
+      height: 180px;
+      padding: 0px 20px;
       margin: 0;
-      text-align: center;
-      justify-self: center;
     }
   }
   .productos{
-    height: 550px;
     h3{
       font-size: 28px;
-      padding: 5px;
     }
-    table{
-      // margin: 30px 50px;
-      background-color: $color4;
-      font-size: 16px;
-      padding: 10px;
+    .item{
+      height: 350px;
+      .medidas{
+        display: none;
+      }
     }
-    img{
-      width: 100px;
-      height: auto;   
-    }
-    li{
-      font-size: 12px;
-    }
-    // td{
-    //   padding: 0px 12px;
-    // }
-    // th{
-    //   padding: 0px 12px;
-    // }
-  }
-  .precio{
-    font-size: 15px;
   }
   .novedades{
     height: 970px;
-  }
-  #novedades{
-    height: 65px;
-    font-size: 40px;
-    padding: 4px;
   }
   .cont iframe{
     width: 400px;
@@ -703,18 +640,16 @@ footer{
     font-size: 16px;
   }
   footer{
-    grid-template-columns: 1fr 1fr;
+    height: 210px;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr;
-    font-size: 12px; 
   }
   .mapa iframe{
     display: none;
   }
 }
+
 @media only screen and (max-width: 640px) {
-  .menu{
-    display: none;       
-  }
   .navbar-collapse{
     width: 120px;
     font-size: 19px;
@@ -724,32 +659,8 @@ footer{
   header{
     height: auto;
   }
-  .productos{
-    height: 600px;
-    table{
-      margin: 30px 48px;
-      // background-color: $color4;
-      font-size: 14px;
-      padding: 10px;
-    }
-    // img{
-    //   // width: 60px;
-    //   // height: auto;   
-    // }
-    li{
-      font-size: 12px;
-    }
-    .precio{
-      font-size: 12px;
-    }
-    td{
-      padding: 0px 9px;
-    }
-    th{
-      padding: 0px 9px;
-    }
-  }
 }
+
 @media only screen and (max-width: 575px) {
   .navbar{
     display: grid;
@@ -757,27 +668,16 @@ footer{
     grid-template-areas: "img1 img3"
                          "img1 img3" ;
   }
-  .quienes_somos h3{
-    font-size: 20px;
-  }
-  .productos {
-    height: 450px;
-    img{
-      width: 70px;
+  .quienes_somos{
+    h3{
+      font-size: 20px;
     }
-    table{
-      font-size: 13px;
-      padding: 8px;
-    }
-  }  
-  .medidas{
-    display: none;
   }
   .cont iframe{
     width: 370px;
-    // height: 180px;
   }
 }
+
 @media only screen and (max-width: 410px) {
   .navbar {
     padding: 0;
@@ -805,27 +705,9 @@ footer{
     }
   }  
   .productos{
-    height: 350px;
-    table{
-      margin: 2px 28px;
-      font-size: 12px;
-      padding: 2px;
+    section{
+      padding: 10px 20px;
     }
-    img{
-      width: 50px;
-    }
-    td{
-      padding: 0px 5px;
-    }
-    th{
-      padding: 0px 5px;
-    }
-    .precio{
-      font-size: 10px;
-    }
-  }
-  .medidas{
-    display: none;
   }
   .novedades{
     height: 850px;
@@ -833,7 +715,6 @@ footer{
   #novedades{
     height: 45px;
     font-size: 25px;
-    padding: 4px;
   }
   .cont iframe{
     width: 280px;
@@ -843,24 +724,14 @@ footer{
     width: 95%; 
     margin-left: 10px; 
     margin-top: 5px; 
-    font-size: 20px; 
     h3{
       font-size: 30px;
     }
   }
-  // #contacto{
-  //   height: 1100px;
-  // }
-  input{
-    margin-left: 30px;
-  }
-  textarea{
-    font-size: 16px;
-  }
   footer{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    height: 80px;  
+    height: 100px;  
     li{
       display: inline-block;
       padding: 0;
@@ -878,7 +749,11 @@ footer{
   .redes{
     font-size: 27px;
   }
+  footer{
+    padding: 10px 50px;
+  }
 }
+
 @media only screen and (max-width: 320px) {
   .redes{
     position: relative;
@@ -890,5 +765,8 @@ footer{
       color: hsl(0, 0%, 97%);  
       text-shadow: none;
     }
+  }
+  footer{
+    padding: 10px 20px;
   }
 }
